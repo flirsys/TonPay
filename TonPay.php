@@ -1,6 +1,4 @@
 <?php
-namespace Core;
-
 use PDO;
 use PDOException;
 use Exception;
@@ -26,7 +24,7 @@ class TonPay {
     $this->apiEndpoint = $this->network === 'testnet'
         ? 'https://testnet.tonapi.io/v2/'
         : 'https://tonapi.io/v2/';
-    $dbPath = $this->config['SQLITE_DB_PATH'] ?? __DIR__.'/sql/tonpay-'.$this->network.'.db';
+    $dbPath = $this->config['SQLITE_DB_PATH'] ?? __DIR__.'/tonpay-'.$this->network.'.db'; //<- DB PATH
     $this->connectDatabase($dbPath);
     $this->setupDatabase();
   }
