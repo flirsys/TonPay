@@ -1,1 +1,3 @@
 # TonPay
+
+CHECK ```example.php```
