@@ -1,9 +1,10 @@
 <?php
-use core\TonPay;
+use TonPay;
 class Main{
   private $TonPay;
   function __construct(){
     $config = [
+      //'SQLITE_DB_PATH' => 'tonpay.db',           //you need this?
       'TON_NETWORK' => 'testnet',                  //testnet OR mainnet
       'RECIPIENT_WALLET_ADDRESS_MAINNET' => '..',  //your mainnet address
       'RECIPIENT_WALLET_ADDRESS_TESTNET' => '..',  //your testnet address
